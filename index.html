@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enhanced Registration Form</title>
+<link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+<header>
+  <h1>Registration</h1>
+</header>
+
+<main>
+  <div class="success-message" id="successMessage">
+    Registration successful! Thank you for signing up.
+  </div>
+  
+  <form id="registrationForm">
+    <div class="form-group">
+      <label for="fullname" class="required">Full Name</label>
+      <input type="text" id="fullname" name="fullname" required>
+      <div class="validation-message" id="fullnameValidation">Please enter your full name</div>
+    </div>
+
+    <div class="form-group">
+      <label for="email" class="required">Email</label>
+      <input type="email" id="email" name="email" required>
+      <div class="validation-message" id="emailValidation">Please enter a valid email address</div>
+    </div>
+
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="tel" id="phone" name="phone">
+    </div>
+
+    <div class="form-group">
+      <label for="country">Country</label>
+      <select id="country" name="country">
+        <option value="">Select a country</option>
+        <option value="us">United States</option>
+        <option value="ca">Canada</option>
+        <option value="uk">United Kingdom</option>
+        <option value="au">Australia</option>
+        <option value="other">Other</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label>Gender</label>
+      <div class="radio-group">
+        <div class="radio-option">
+          <input type="radio" id="male" name="gender" value="male">
+          <label for="male">Male</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="other" name="gender" value="other">
+          <label for="other">Other</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="prefer-not" name="gender" value="prefer-not">
+          <label for="prefer-not">Prefer not to say</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Interests</label>
+      <div class="checkbox-group">
+        <div class="checkbox-option">
+          <input type="checkbox" id="web" name="interests" value="web">
+          <label for="web">Web Development</label>
+        </div>
+        <div class="checkbox-option">
+          <input type="checkbox" id="design" name="interests" value="design">
+          <label for="design">Design</label>
+        </div>
+        <div class="checkbox-option">
+          <input type="checkbox" id="mobile" name="interests" value="mobile">
+          <label for="mobile">Mobile Development</label>
+        </div>
+        <div class="checkbox-option">
+          <input type="checkbox" id="data" name="interests" value="data">
+          <label for="data">Data Science</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Notes</label>
+      <textarea id="notes" name="notes" rows="4" placeholder="Any additional information..."></textarea>
+    </div>
+
+    <div class="button-group">
+      <button type="submit">Submit</button>
+      <button type="reset">Reset</button>
+    </div>
+  </form>
+</main>
+
+<footer>
+  &copy; 2025 Registration Form. All rights reserved.
+</footer>
+
+<script src="index.js"></script>
+</body>
+</html>

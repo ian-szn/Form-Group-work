@@ -1,0 +1,179 @@
+
+:root {
+  --primary: #3498db;
+  --primary-dark: #2980b9;
+  --secondary: #95a5a6;
+  --secondary-dark: #7f8c8d;
+  --danger: #e74c3c;
+  --success: #2ecc71;
+  --dark: #2c3e50;
+  --light: #f5f7fa;
+  --gray: #ecf0f1;
+  --text: #2c3e50;
+  --border: #bdc3c7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: var(--light);
+  margin: 0;
+  padding: 0;
+  color: var(--text);
+  line-height: 1.6;
+}
+
+header, footer {
+  background: var(--dark);
+  color: #fff;
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: 600;
+}
+
+main {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.required::after {
+  content: " *";
+  color: var(--danger);
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.radio-group, .checkbox-group {
+  margin-top: 0.5rem;
+}
+
+.radio-option, .checkbox-option {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.radio-option input, .checkbox-option input {
+  width: auto;
+  margin-right: 0.5rem;
+}
+
+.radio-option label, .checkbox-option label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  flex: 1;
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button[type="submit"] {
+  background: var(--primary);
+  color: white;
+}
+
+button[type="submit"]:hover {
+  background: var(--primary-dark);
+}
+
+button[type="reset"] {
+  background: var(--secondary);
+  color: white;
+}
+
+button[type="reset"]:hover {
+  background: var(--secondary-dark);
+}
+
+.validation-message {
+  color: var(--danger);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+  display: none;
+}
+
+input:invalid, select:invalid, textarea:invalid {
+  border-color: var(--danger);
+}
+
+input:valid, select:valid, textarea:valid {
+  border-color: var(--success);
+}
+
+.success-message {
+  background: var(--success);
+  color: white;
+  padding: 1rem;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  display: none;
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 640px) {
+  main {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .button-group {
+    flex-direction: column;
+  }
+}
