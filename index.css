@@ -165,6 +165,15 @@ input:valid, select:valid, textarea:valid {
 footer {
   margin-top: 2rem;
   font-size: 0.9rem;
+
+  text-align: center;
+    padding: 30px 20px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    color: #4a5568;
+    margin-top: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
 @media (max-width: 640px) {
